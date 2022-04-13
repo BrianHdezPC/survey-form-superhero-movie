@@ -116,9 +116,13 @@ label {
   background-color: white;
 }
 
-input.no-autofill-bkg:-webkit-autofill {
-  -webkit-background-clip: text;
-  -webkit-background-fill-color: white !important;
+/* Elimina autofill background en Chrome y mantiene tema de diseño, no funciona
+si background es transparente. Importante darle color*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .container {
