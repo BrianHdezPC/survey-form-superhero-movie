@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Survey Form Test: FCC</title>
     <link rel="stylesheet" href="styles.css" type="text/css" media=screen>
@@ -15,7 +15,6 @@
         <div class="titulo">
           <h1 id="title"><strong> ¿Cuál Ha Sido la Mejor Película de Superhéroes que Has Visto?</strong></h1>
         </div>
-
         <div class="caja_transparente col-11">
           <p id="description">Cuéntanos tu opinión sobre la película de tu personaje favorito y dinos qué
             características, efectos, escenas, habilidades o hazañas le otorgan la posición #1. Puedes elegir
@@ -46,7 +45,7 @@
                   cuando el input es de type number. Chrome y Edge funcionan normalmente sin esta validación -->
                   <div class="grupo">
                     <label id="number-label" for="edad" style="font-weight:bold;">Edad:</label>
-                    <input required id="number" type="number" name="edad" value="" placeholder="10"  min="10" max="150" required pattern="[0-9]{2,4}"
+                    <input required id="edad" type="number" name="edad" value="" placeholder="10"  min="10" max="150" required pattern="[0-9]{2,4}"
                     onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" class="control">
                   </div>
                   <br>
@@ -66,32 +65,32 @@
                   </div>
                   <br>
                   <div class="campos">
-                    <div name="radio" >
+                    <div class="radio-group" >
                       <fieldset>
-                        <legend style="font-weight:bold;">¿Qué Genero Prefieres?</legend>
+                        <legend style="font-weight:bold;">¿Qué Género Prefieres?</legend>
                         <div class="radio">
-                          <label id="accion" for="accion">Acción/Combate</label>
-                          <input type="radio" name="genre" value="accion">
+                          <label for="accion">Acción/Combate</label>
+                          <input type="radio" id="accion" name="genre" value="accion" >
                         </div>
                         <br>
                         <div class="radio">
-                          <label id="aventura" for="aventura">Aventura</label>
-                          <input type="radio" name="genre" value="aventura">
+                          <label for="aventura">Aventura</label>
+                          <input type="radio" id="aventura" name="genre" value="aventura">
                         </div>
                         <br>
                         <div class="radio">
-                          <label id="comedia" for="comedia">Comedia</label>
-                          <input type="radio" name="genre" value="comedia" checked>
+                          <label for="comedia">Comedia</label>
+                          <input type="radio" id="comedia" name="genre" value="comedia" checked>
                         </div>
                         <br>
                         <div class="radio">
-                          <label id="realista" for="realista">Realista</label>
-                          <input type="radio" name="genre" value="realista">
+                          <label for="realista">Realista</label>
+                          <input type="radio" id="realista" name="genre" value="realista">
                         </div>
                         <br>
                         <div class="radio">
-                          <label id="sci_fi" for="sci_fi">Fantasía</label>
-                          <input type="radio" name="genre" value="fantasia">
+                          <label for="sci_fi">Fantasía</label>
+                          <input type="radio" id="sci_fi" name="genre" value="fantasia">
                         </div>
                         <br>
                       </fieldset>
@@ -105,28 +104,31 @@
                     class="control">
                   </div>
                   <br>
-                  <p style="text-align: justify; font-weight:bold;">¿Qué la hace especial? <span>(marca todas las opciones que consideres apropiadas, por favor.)</span></p>
-                  <br>
+                  <p style="font-weight:bold;">¿Qué la hace especial?</p>
                   <div class="grupo">
-                    <label for="car1"> <input type="checkbox" name="caracteristicas" id="car1" value="gran-guion" class="checkbox">  Gran Guión/Argumento</label>
-                    <br>
-                    <label for="car2"> <input type="checkbox" name="caracteristicas" id="car2" value="excelentes-personajes" class="checkbox">  Excelente desarrollo
-                      de personajes (principales y de reparto)</label>
-                    <br>
-                    <label for="car3"> <input type="checkbox" name="caracteristicas" id="car3" value="cinematografia" class="checkbox">  Cinematografía</label>
-                    <br>
-                    <label for="car4"> <input type="checkbox" name="caracteristicas" id="car4" value="final-satisfactorio" class="checkbox">  Final satisfactorio</label>
-                    <br>
-                    <label for="car5"> <input type="checkbox" name="caracteristicas" id="car5" value="hazañas-impactantes" class="checkbox">  Hazañas impactantes y emocionantes</label>
-                    <br>
-                    <label for="car6"> <input type="checkbox" name="caracteristicas" id="car6" value="banda-sonora-destacada" class="checkbox">  Su banda sonora destacada</label>
-                    <br>
-                    <label for="car7"> <input type="checkbox" name="caracteristicas" id="car7" value="paleta-colores" class="checkbox">  Buena iluminación y paleta de colores</label>
+                    <fieldset>
+                      <legend>Marca todas las opciones que consideres apropiadas, por favor.</legend>
+                      <label for="car1"> <input type="checkbox" name="caracteristicas" id="car1" value="gran-guion" class="checkbox">  Gran guión/argumento</label>
+                      <br>
+                      <label for="car2"> <input type="checkbox" name="caracteristicas" id="car2" value="excelentes-personajes" class="checkbox">  Excelente desarrollo
+                        de personajes (principales y de reparto)</label>
+                      <br>
+                      <label for="car3"> <input type="checkbox" name="caracteristicas" id="car3" value="cinematografia" class="checkbox">  Cinematografía</label>
+                      <br>
+                      <label for="car4"> <input type="checkbox" name="caracteristicas" id="car4" value="final-satisfactorio" class="checkbox">  Final satisfactorio</label>
+                      <br>
+                      <label for="car5"> <input type="checkbox" name="caracteristicas" id="car5" value="hazañas-impactantes" class="checkbox">  Hazañas impactantes y emocionantes</label>
+                      <br>
+                      <label for="car6"> <input type="checkbox" name="caracteristicas" id="car6" value="banda-sonora-destacada" class="checkbox">  Su banda sonora destacada</label>
+                      <br>
+                      <label for="car7"> <input type="checkbox" name="caracteristicas" id="car7" value="paleta-colores" class="checkbox">  Buena iluminación y paleta de colores</label>
+                    </fieldset>
                   </div>
                   <br>
                   <div class="grupo">
                     <div class="caja_comentarios">
-                      <p style="text-align: justify; font-weight:bold;">Comentarios adicionales sobre tu película preferida.</p>
+                      <p>Comentarios adicionales sobre tu película preferida.</p>
+                      <label for="comment">(o sobre lo que quieras hablarnos.)</label>
                       <textarea required name="comentarios" id="comment" class="comentarios" placeholder="No me quiero ir, Señor Stark..."></textarea>
                     </div>
                   </div>
