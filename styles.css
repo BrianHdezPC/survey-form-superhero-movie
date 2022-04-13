@@ -117,7 +117,7 @@ label {
 }
 
 input.no-autofill-bkg:-webkit-autofill {
-      background-color: transparent !important;
+      background-color: white !important;
       -webkit-box-shadow: 0 0 0 50px white inset;
 }
 
