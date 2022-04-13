@@ -111,7 +111,7 @@ label {
   height: 40px;
   margin-bottom: 2px;
   font-family: inherit;
-  font-size: 17px;
+  font-size: 16px;
   color: black;
   background-color: white;
 }
@@ -164,6 +164,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  border-style: none;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
