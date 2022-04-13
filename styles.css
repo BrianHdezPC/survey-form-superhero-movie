@@ -12,7 +12,7 @@ body {
   display: flex;
   max-width: 100%;
   font-family: 'Mouse Memoirs','Space Mono', monospace, Helvetica;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 /* mouse-memoirs-regular - latin-ext_latin */
@@ -37,7 +37,9 @@ body {
 
 .titulo {
   display: flex;
-  width: 100%;
+  text-align: center;
+  justify-content: center;
+  width: 97%;
 }
 
 div.caja_transparente {
