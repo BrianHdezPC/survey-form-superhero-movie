@@ -1,0 +1,179 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+  background-image: url(imagenes/batman.jpg);/*spidey.png*/
+  background-color: #c82121;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: white;
+  font-family: 'Mouse Memoirs','Space Mono', monospace, Helvetica;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px;
+  border-style: none;
+}
+
+.caja {
+  display: flex;
+  border: 1px;
+  border-style: none;
+  height: 175px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.caja_transparente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color:  black;
+  border: 1px solid black;
+  border-radius: 8px;
+  opacity: 0.8;
+  margin-left: 1.5%;
+  width: 97%;
+}
+
+h1 {
+  font-family: 'Bangers', monospace;
+  font-size: 60px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+/* bangers-regular - latin para título Comics */
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url('/fonts/bangers-v19-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Bangers Regular'), local('Bangers-Regular'),
+       url('/fonts/bangers-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/bangers-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/bangers-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/bangers-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/bangers-v19-latin-regular.svg#Bangers') format('svg'); /* Legacy iOS */
+}
+
+h1 strong {
+  color: white;
+}
+
+/* Para móviles: */
+[class*="col- caja_transparente"] {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px;
+  border-style: none;
+}
+
+.row::after {
+content: "";
+clear: both;
+}
+
+@media only screen and (min-width: 600px) {
+/* For tablets: */
+.col-s-1 {width: 8.33%;}
+.col-s-2 {width: 16.66%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33%;}
+.col-s-5 {width: 41.66%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33%;}
+.col-s-8 {width: 66.66%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33%;}
+.col-s-11 {width: 97%;}
+.col-s-12 {width: 100%;}
+
+
+[class*="col-"] {
+float: left;
+padding: 15px;
+border: 1px;
+border-style: none;
+}
+
+.row::after {
+content: "";
+clear: both;
+}
+
+}
+
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 97%;}
+  .col-12 {width: 100%;}
+
+  [class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px;
+  border-style: none;
+  }
+  .row::after {
+  content: "";
+  clear: both;
+  }
+
+}
+
+@media only screen and (min-width: 919px) {
+/* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 97%;}
+  .col-12 {width: 100%;}
+
+
+  [class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px;
+  border-style: none;
+  flex-basis: 25%;
+  }
+
+  .row::after {
+  content: "";
+  clear: both;
+  }
+
+}
