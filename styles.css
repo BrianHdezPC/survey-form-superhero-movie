@@ -118,6 +118,7 @@ label {
 
 input.no-autofill-bkg:-webkit-autofill {
       background-color: white !important;
+      -webkit-background-clip: text;
 }
 
 .container {
