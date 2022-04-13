@@ -116,6 +116,8 @@ label {
   background-color: white;
 }
 
+/* Elimina autofill background en Chrome y mantiene tema de diseño, no funciona
+si background es transparente. Importante darle color*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
