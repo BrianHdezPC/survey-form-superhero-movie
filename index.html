@@ -26,19 +26,21 @@
                   <div class="grupo">
                     <label id="name-label" for="name" style="font-weight:bold;">Nombre:</label>
                     <input required type="text" name="name" id="name" value="" placeholder="Por favor, indica tu nombre."
-                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+{2,}" class="control">
+                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+{2,}" class="control no-autofill-bkg">
+                    <!-- La clase no-autofill-bkg se añade para impedir que Chrome cambie el color del fondo en los input.
+                    Este comportamiento solo ocurre en Android hasta ahora-->
                   </div>
                   <br>
                   <div class="grupo">
                     <label for="apellido" style="font-weight:bold;">Apellido:</label>
                     <input required type="text" name="apellido" id="apellido" value="" placeholder="Por favor, indica tu apellido."
-                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+{2,}" class="control">
+                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+{2,}" class="control no-autofill-bkg">
                   </div>
                   <br>
                   <div class="grupo">
                     <label id="email-label" for="email" style="font-weight:bold;">Correo Electrónico:</label>
                     <input  required type="email" name="email" id="email" value="" placeholder="abc@ejemplo.com"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="control">
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="control no-autofill-bkg">
                   </div>
                   <br>
                   <!-- Ejecuta isNaN () onkeypress para verificar que no se permita input de letras en Firefox
@@ -99,7 +101,7 @@
                   <div class="grupo">
                     <label for="pelicula" style="font-weight:bold;">¿Cuál es el nombre de tu película preferida?</label>
                     <input required type="text" name="pelicula" id="pelicula" value="" placeholder="Ej.: Spider-Man: No way home."
-                    class="control">
+                    class="control no-autofill-bkg">
                   </div>
                   <br>
                   <p style="font-weight:bold;">¿Qué la hace especial?</p>
@@ -147,9 +149,7 @@
                 </form>
               </div>
             </div>
-
         </div>
-
       </div>
     </main>
   </body>

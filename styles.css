@@ -90,7 +90,7 @@ h2 {
   font-weight: bold;
 }
 
-/* Permite aplicar forma de placeholder a la opción indicada como ejemplo  */
+/* Permite aplicar forma de placeholder a la opción indicada como ejemplo en dropdown */
 select:invalid{
     color: gray;
 }
@@ -114,6 +114,10 @@ label {
   font-size: 16px;
   color: black;
   background-color: white;
+}
+
+input.no-autofill-bkg:-webkit-autofill {
+  -webkit-background-clip: text;
 }
 
 .container {
